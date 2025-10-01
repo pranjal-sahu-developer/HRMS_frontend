@@ -19,7 +19,7 @@ const AdminManageLeaves = () => {
     const fetchLeaves = async () => {
       try {
         const token = localStorage.getItem("token");
-        const response = await axios.get("http://localhost:5001/api/leaves", {
+        const response = await axios.get("https://hrms-backend-five.vercel.app/api/leaves", {
           headers: { Authorization: `Bearer ${token}` },
         });
         if (response.data.success) {
@@ -80,7 +80,7 @@ const AdminManageLeaves = () => {
     try {
       const token = localStorage.getItem("token");
       const response = await axios.put(
-        `http://localhost:5001/api/leaves/status/${id}`,
+        `https://hrms-backend-five.vercel.app/api/leaves/status/${id}`,
         { status },
         { headers: { Authorization: `Bearer ${token}` } }
       );

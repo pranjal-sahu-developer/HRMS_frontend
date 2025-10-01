@@ -22,13 +22,13 @@ const EmployeeSummary = () => {
 
         // Leaves
         const leaveRes = await axios.get(
-          `http://localhost:5001/api/leaves/user/${user._id}`,
+          `https://hrms-backend-five.vercel.app/api/leaves/user/${user._id}`,
           { headers: { Authorization: `Bearer ${token}` } }
         );
 
         // Salary
         const salaryRes = await axios.get(
-          `http://localhost:5001/api/salary/user/${user._id}`,
+          `https://hrms-backend-five.vercel.app/api/salary/user/${user._id}`,
           { headers: { Authorization: `Bearer ${token}` } }
         );
 

@@ -12,7 +12,7 @@ const DepartmentList = () => {
   useEffect(() => {
     const fetchDepartments = async () => {
       try {
-        const response = await axios.get("http://localhost:5001/api/department/list", {
+        const response = await axios.get("https://hrms-backend-five.vercel.app/api/department/list", {
           headers: { Authorization: `Bearer ${localStorage.getItem("token")}` },
         });
 
@@ -39,7 +39,7 @@ const DepartmentList = () => {
   const handleDelete = async (id) => {
     if (!window.confirm("Are you sure you want to delete this department?")) return;
     try {
-      const response = await axios.delete(`http://localhost:5001/api/department/delete/${id}`, {
+      const response = await axios.delete(`https://hrms-backend-five.vercel.app/api/department/delete/${id}`, {
         headers: { Authorization: `Bearer ${localStorage.getItem("token")}` },
       });
 

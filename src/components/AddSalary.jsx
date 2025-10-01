@@ -251,7 +251,7 @@ const AddSalary = () => {
         paymentDate,
       };
 
-      const res = await axios.post("http://localhost:5001/api/salary/add", payload, {
+      const res = await axios.post("https://hrms-backend-five.vercel.app/api/salary/add", payload, {
         headers: { Authorization: `Bearer ${localStorage.getItem("token")}` },
       });
 

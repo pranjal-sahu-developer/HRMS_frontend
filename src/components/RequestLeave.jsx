@@ -24,7 +24,7 @@ const RequestLeave = () => {
       setLoading(true);
       const token = localStorage.getItem("token");
       const response = await axios.post(
-        "http://localhost:5001/api/leaves/add",
+        "https://hrms-backend-five.vercel.app/api/leaves/add",
         {
           type: leaveType,
           from: fromDate,

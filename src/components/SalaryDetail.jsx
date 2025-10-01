@@ -12,7 +12,7 @@ const SalaryDetail = () => {
     useEffect(() => {
         const fetchSalary = async () => {
             try {
-                const res = await axios.get(`http://localhost:5001/api/salary/employee/${id}`, {
+                const res = await axios.get(`https://hrms-backend-five.vercel.app/api/salary/employee/${id}`, {
                     headers: { Authorization: `Bearer ${localStorage.getItem("token")}` },
                 });
                 if (res.data.success) setSalaries(res.data.salaries);

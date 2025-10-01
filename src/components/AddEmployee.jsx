@@ -24,7 +24,7 @@ const AddEmployee = () => {
   useEffect(() => {
     const fetchDepartments = async () => {
       try {
-        const response = await axios.get("http://localhost:5001/api/department/list", {
+        const response = await axios.get("https://hrms-backend-five.vercel.app/api/department/list", {
           headers: {
             Authorization: `Bearer ${localStorage.getItem("token")}`,
           },

@@ -12,7 +12,7 @@ const EditDepartment = () => {
   useEffect(() => {
     const fetchDepartment = async () => {
       try {
-        const response = await axios.get("http://localhost:5001/api/department/list", {
+        const response = await axios.get("https://hrms-backend-five.vercel.app/api/department/list", {
           headers: {
             Authorization: `Bearer ${localStorage.getItem("token")}`,
           },
@@ -37,7 +37,7 @@ const EditDepartment = () => {
     e.preventDefault();
     try {
       const response = await axios.put(
-        `http://localhost:5001/api/department/update/${id}`,
+        `https://hrms-backend-five.vercel.app/api/department/update/${id}`,
         { dep_name: depName, description },
         {
           headers: {

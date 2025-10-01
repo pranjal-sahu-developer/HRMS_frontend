@@ -17,7 +17,7 @@ const UserProfile = () => {
     const fetchProfile = async () => {
       try {
         const response = await axios.get(
-          `http://localhost:5001/api/employee/${employeeId}`,
+          `https://hrms-backend-five.vercel.app/api/employee/${employeeId}`,
           {
             headers: {
               Authorization: `Bearer ${localStorage.getItem("token")}`,
@@ -54,7 +54,7 @@ const UserProfile = () => {
           <img
             src={
               employee.userId?.profileImage
-                ? `http://localhost:5001/${employee.userId.profileImage}`
+                ? `https://hrms-backend-five.vercel.app/${employee.userId.profileImage}`
                 : "https://via.placeholder.com/250"
             }
             alt={employee.userId?.name || "Employee"}

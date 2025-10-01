@@ -11,7 +11,7 @@ const AddDepartment = () => {
     e.preventDefault();
    try {
          const response = await axios.post(
-      "http://localhost:5001/api/department/add",
+      "https://hrms-backend-five.vercel.app/api/department/add",
       { dep_name: departmentName, description },
       {
         headers: {

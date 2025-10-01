@@ -39,7 +39,7 @@ const EmployeeSetting = () => {
   setLoading(true);
   const token = localStorage.getItem("token");
   const response = await axios.put(
-    "http://localhost:5001/api/settings/change-password", // ✅ correct URL
+    "https://hrms-backend-five.vercel.app/api/settings/change-password", // ✅ correct URL
     { currentPassword, newPassword },
     { headers: { Authorization: `Bearer ${token}` } }
   );

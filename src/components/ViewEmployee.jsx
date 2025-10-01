@@ -12,7 +12,7 @@ const ViewEmployee = () => {
     useEffect(() => {
         const fetchEmployee = async () => {
             try {
-                const response = await axios.get(`http://localhost:5001/api/employee/${id}`, {
+                const response = await axios.get(`https://hrms-backend-five.vercel.app/api/employee/${id}`, {
                     headers: { Authorization: `Bearer ${localStorage.getItem("token")}` },
                 });
                 if (response.data.success) setEmployee(response.data.employee);
@@ -51,7 +51,7 @@ const ViewEmployee = () => {
                     <img
                         src={
                             employee.userId?.profileImage
-                                ? `http://localhost:5001/${employee.userId.profileImage}`
+                                ? `https://hrms-backend-five.vercel.app/${employee.userId.profileImage}`
                                 : "https://via.placeholder.com/200"
                         }
                         alt={employee.userId?.name || "Employee"}

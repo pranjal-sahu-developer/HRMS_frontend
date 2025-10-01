@@ -14,7 +14,7 @@ const AuthProvider = ({ children }) => {
       try {
         const token = localStorage.getItem("token");
         if (token) {
-          const res = await axios.get("http://localhost:5001/api/auth/verify", {
+          const res = await axios.get("https://hrms-backend-five.vercel.app/api/auth/verify", {
             headers: { Authorization: `Bearer ${token}` },
           });
           if (res.data.success) setUser(res.data.user);

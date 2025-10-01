@@ -15,7 +15,7 @@ const LeaveHistory = () => {
       try {
         const token = localStorage.getItem("token");
         const response = await axios.get(
-          `http://localhost:5001/api/leaves/user/${id}`,
+          `https://hrms-backend-five.vercel.app/api/leaves/user/${id}`,
           { headers: { Authorization: `Bearer ${token}` } }
         );
         if (response.data.success) {

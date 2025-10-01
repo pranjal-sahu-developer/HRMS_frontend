@@ -21,7 +21,7 @@ const EditEmployee = () => {
   useEffect(() => {
   const fetchEmployee = async () => {
     try {
-      const res = await axios.get(`http://localhost:5001/api/employee/${id}`, {
+      const res = await axios.get(`https://hrms-backend-five.vercel.app/api/employee/${id}`, {
         headers: { Authorization: `Bearer ${localStorage.getItem("token")}` },
       });
       if (res.data.success) {
@@ -45,7 +45,7 @@ const EditEmployee = () => {
 
   const fetchDepartments = async () => {
     try {
-      const res = await axios.get("http://localhost:5001/api/department/list", {
+      const res = await axios.get("https://hrms-backend-five.vercel.app//api/department/list", {
         headers: { Authorization: `Bearer ${localStorage.getItem("token")}` },
       });
       if (res.data.success) {
@@ -68,7 +68,7 @@ const EditEmployee = () => {
       const payload = { name, employeeId, designation, department, salary };
 
       const res = await axios.put(
-        `http://localhost:5001/api/employee/update/${id}`,
+        `https://hrms-backend-five.vercel.app/api/employee/update/${id}`,
         payload,
         { headers: { Authorization: `Bearer ${localStorage.getItem("token")}` } }
       );

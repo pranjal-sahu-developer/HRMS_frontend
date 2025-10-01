@@ -17,7 +17,7 @@ const EmployeeList = () => {
   useEffect(() => {
     const fetchEmployees = async () => {
       try {
-        const response = await axios.get("http://localhost:5001/api/employee/list", {
+        const response = await axios.get("https://hrms-backend-five.vercel.app/api/employee/list", {
           headers: { Authorization: `Bearer ${localStorage.getItem("token")}` },
         });
 
@@ -97,7 +97,7 @@ const EmployeeList = () => {
                     <td className="px-4 py-3 whitespace-nowrap">{indexOfFirst + index + 1}</td>
                     <td className="px-4 py-3 whitespace-nowrap">
                       <img
-                        src={emp.userId?.profileImage ? `http://localhost:5001/${emp.userId.profileImage}` : "https://via.placeholder.com/60"}
+                        src={emp.userId?.profileImage ? `https://hrms-backend-five.vercel.app/${emp.userId.profileImage}` : "https://via.placeholder.com/60"}
                         alt={emp.userId?.name || "Employee"}
                         className="w-14 h-14 rounded-full border shadow-sm object-cover"
                       />
