@@ -98,7 +98,10 @@ const Login = () => {
     try {
       const response = await axios.post(
         "https://hrms-backend-five.vercel.app/api/auth/login",
-        { email, password }
+        { email, password },
+         {
+  headers: { "Content-Type": "application/json" }
+}
       );
       if (response.data.success) {
         login(response.data.user);
